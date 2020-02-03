@@ -1,0 +1,33 @@
+{% extends "deflayout.html" %}
+
+{% block title %}
+    New event
+{% endblock %}
+
+{% block main %}
+    <form action="/newevent" method="post">
+        <div class="form-group">
+            <input class="form-control" name="title" placeholder="Title e.g. John's birthday" type="text">
+            <input class="form-control" name="date" type="date">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="venue" placeholder="Venue e.g. Town Hall" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="house" placeholder="House e.g. 42" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="street" placeholder="Street e.g. Baker street" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="city" placeholder="City e.g. London" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="zip" placeholder="Zip code e.g. 12345" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="country" placeholder="Countrz e.g. United Kingdom" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="starttime" type="time">
+            <input autocomplete="off" autofocus class="form-control" name="endtime" type="time">
+        </div>
+        <div class="form-group">
+            <h4>Things you need from us:</h4>
+            <h6>Table cloth: </h6><input autofocus class="form-control" name="table_cloth" type="number">
+            <h6>Led strip: </h6><input autofocus class="form-control" name="led_strip" type="number">
+            <h6>Chandelier: </h6><input autofocus class="form-control" name="chandelier" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Create</button>
+    </form>
+{% endblock %}

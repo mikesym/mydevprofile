@@ -1,0 +1,46 @@
+{% extends "deflayout.html" %}
+
+{% block title %}
+    {{ username }}'s events
+{% endblock %}
+
+{% block main %}
+
+    <button id="newevent" onclick="NewEvent()"  class="btn btn-primary btn-lg">Add an event</button>
+
+    <p>Upcoming events:</p>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+        </tr>
+
+        {% for event in events %}
+
+        <tr>
+            <td>{{ event.title }}</td>
+            <td>{{ event.date }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+    <br>
+    <p>Past events:</p>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+        </tr>
+    </table>
+    <script>
+
+        function NewEvent(){
+
+            window.location.href = '/newevent';
+
+        }
+
+    </script>
+
+{% endblock %}

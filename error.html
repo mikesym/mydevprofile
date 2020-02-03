@@ -1,0 +1,11 @@
+{% extends "deflayout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+    <p>Request failed ({{ code }}).</p>
+
+    <p>{{ message }}.</p>
+{% endblock %}
